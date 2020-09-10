@@ -7,11 +7,16 @@ This branch is tested with Blender 2.8.
 
 1. Install io_import_planar_code.py from Edit->Preferences in Blender.
 2. Enable the addon (listed in Testing).
-![preference](https://github.com/tsurutana/planer_code-importer-blender/blob/master/images/preference.png)
+
+<img src="images/preference.png" width="450" alt="preference">
+
 3. Then, menu item for Planer code (.*) will be added to File->Import. 
 4. Import a graph at specified index. 
-![menu](https://github.com/tsurutana/planer_code-importer-blender/blob/master/images/menu.png)
+
+<img src="images/menu.png" width="300" alt="menu">
+
 5. Reconstructed polyhedron will be added to the scene.
+
 ![reconstructed](https://github.com/tsurutana/planer_code-importer-blender/blob/master/images/reconstructed.png)
 
 ## Note
