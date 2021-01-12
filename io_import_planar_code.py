@@ -163,7 +163,8 @@ class PlanarCodeReader:
             for v in rests:
                 f = np.linalg.norm(fv[v.index])
                 size = min(f, cool)
-                fv[v.index] /= f
+                if f != 0:
+                    fv[v.index] /= f
                 fv[v.index] *= size
                 v.co.x += fv[v.index, 0]
                 v.co.y += fv[v.index, 1]
