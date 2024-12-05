@@ -83,7 +83,7 @@ class PlanarCodeReader:
                     # add face counter 
                     lastIndex = len(adj)-1
                     for j in range(lastIndex):
-                        self.addIfAbsent(collections.Counter([i, adj[j]-1, adj[j+1]-1]))
+                        self.addIfAbsent(collections.Counter([i, adj[j+1]-1, adj[j]-1]))
                     self.addIfAbsent(collections.Counter([i, adj[0]-1, adj[lastIndex]-1]))
                     i += 1
                 for counter in self.faceCounters:
@@ -121,7 +121,7 @@ class PlanarCodeReader:
         inv_sqrt = 1.0 / np.sqrt(n)
         angle = 360.0 / n
         for i, v in enumerate(outerFace.verts):
-            rad = (i * angle / 180.0) * np.pi
+            rad = (-i * angle / 180.0) * np.pi
             x = inv_sqrt * np.cos(rad)
             y = inv_sqrt * np.sin(rad)
             v.co.x = x
